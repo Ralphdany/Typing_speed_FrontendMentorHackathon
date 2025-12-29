@@ -1,7 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+@import "tailwindcss";
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Sora", sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  /* Primary colors */
+  --color-yellow-primary: hsl(49, 85%, 70%);
+  --color-green-primary: hsl(140, 63%, 57%);
+  --color-blue-primary: hsl(214, 100%, 55%);
+  --color-blue-secondary: hsl(210, 100%, 65%);
+  --color-red-primary: hsl(354, 63%, 57%);
+
+  /* Neutral colors */
+  --color-dark: hsl(0, 0%, 7%);
+  --color-gray-ntrl-500: hsl(240, 3%, 46%);
+  --color-gray-ntrl-300: hsl(240, 1%, 59%);
+
+  /* Font weights */
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -13,7 +31,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
+@theme {
+  /* colors */
+  --color-yellow-primary: var(--color-yellow-primary);
+  --color-green-primary: var(--color-green-primary);
+  --color-blue-primary: var(--color-blue-primary);
+  --color-blue-secondary: var(--color-blue-secondary);
+  --color-red-primary: var(--color-red-primary);
+  --color-dark: var(--color-dark);
+  --color-gray-ntrl-500: var(--color-gray-ntrl-500);
+  --color-gray-ntrl-300: var(--color-gray-ntrl-300);
+
+  /* font weights */
+  --font-weight-normal: var(--font-weight-normal);
+  --font-weight-semibold: var(--font-weight-semibold);
+  --font-weight-bold: var(--font-weight-bold);
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
@@ -65,4 +112,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
